@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="element">
+        <p>Area of the Rectangle</p>
+        <input type="number" id="length" placeholder="length">
+        <input type="number" id="breadth" placeholder="breadth">
+        <button id="btn">
+            submit
+
+        </button>
+        <div id="newdiv">
+
+        </div>
+    </div>
+
+    <script>
+        let length = document.getElementById('length')
+        let breadth = document.getElementById('breadth')
+        let btn = document.getElementById('btn')
+        let newdiv = document.getElementById('newdiv')
+
+
+
+        function hello() {
+            let len = length.value
+            let bred = breadth.value
+            let nnew = len * bred   
+            let result = 'Area = ' + nnew
+
+            let para = document.createElement('p')
+            newdiv.appendChild(para)
+            para.innerText = result
+          
+
+
+
+
+
+        }
+        function clr() {
+            length.value = ''
+            breadth.value = ''
+        }
+
+
+        btn.addEventListener('click', () => {
+
+            hello()
+            clr()
+
+
+
+
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>
